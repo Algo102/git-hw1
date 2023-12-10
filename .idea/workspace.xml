@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a762f1-6e08-4da0-9a9b-f7c2f4baef3b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7-12.MySQL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataBase.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PackAnimals/Camel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PackAnimals/Donkey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PackAnimals/Horse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PackAnimals/PackAnimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PetRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pets/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pets/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pets/Hamster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pets/Pet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataBase.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DataBase.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PetRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PetRegistry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702160116606</updated>
       <workItem from="1702160118278" duration="8613000" />
-      <workItem from="1702168856328" duration="4264000" />
+      <workItem from="1702168856328" duration="6061000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1702160490785</created>
@@ -131,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702161449260</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Иерархия классов в Java&#10;Реестр домашних животных">
+      <created>1702173480325</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702173480325</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +139,7 @@
     <MESSAGE value="3 Task 1-5" />
     <MESSAGE value="4 Task 6" />
     <MESSAGE value="Task 7-12" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 7-12" />
+    <MESSAGE value="Иерархия классов в Java&#10;Реестр домашних животных" />
+    <option name="LAST_COMMIT_MESSAGE" value="Иерархия классов в Java&#10;Реестр домашних животных" />
   </component>
 </project>

@@ -157,18 +157,24 @@ public class PetRegistry implements AutoCloseable {
                         break;
                     case 3:
                         System.out.println("Enter animal name: ");
-                        String aName = scanner.nextLine();
-                        Animal fAnimal = petRegistry.animals.stream()
-                                .filter(a -> a.getName().equals(aName))
-                                .findFirst()
-                                .orElse(null);
-                        if (fAnimal == null) {
-                            System.out.println("No such animal");
-                            break;
-                        }
-                        List<String> commands = petRegistry.getCommands(fAnimal);
-                        for (String cmd : commands) {
-                            System.out.println(cmd);
+                        String animalNameInput = scanner.nextLine();
+                        try (BufferedReader reader = new BufferedReader(new FileReader("DataBase.csv"))) {
+                            String line;
+                            boolean found = false;
+                            while ((line = reader.readLine()) != null) {
+                                String[] data = line.split(",");
+                                if (data.length >= 2 && data[1].equals(animalNameInput)) {
+                                    System.out.println("Animal: " + data[1]);
+                                    System.out.println("Command: " + data[2]);
+                                    found = true;
+                                    break;
+                                }
+                            }
+                            if (!found) {
+                                System.out.println("No such animal");
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
                         break;
                     case 4:
