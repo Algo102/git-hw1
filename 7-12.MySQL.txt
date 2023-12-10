@@ -1,0 +1,172 @@
+-- 7 В ранее подключенном MySQL создать базу данных с названием "Human Friends".
+
+CREATE DATABASE IF NOT EXISTS HumanFriends;
+USE HumanFriends;
+
+
+-- 8 Создать таблицы, соответствующие иерархии из вашей диаграммы классов.
+
+CREATE TABLE IF NOT EXISTS Animal(
+	Id INT AUTO_INCREMENT PRIMARY KEY, 
+	Class_n VARCHAR(20));
+    
+CREATE TABLE IF NOT EXISTS PackAnimals(
+	Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name_animal VARCHAR (20),
+    Class_id INT,
+    FOREIGN KEY (Class_id) REFERENCES Animal (Id) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE IF NOT EXISTS Pets(
+	Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name_animal VARCHAR (20),
+    Class_id INT,
+    FOREIGN KEY (Class_id) REFERENCES Animal (Id) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE IF NOT EXISTS cats(       
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Name VARCHAR(20), 
+    Birth_date DATE,
+    Comands VARCHAR(20),
+	type VARCHAR(20) NOT NULL,
+    vid VARCHAR(20) NOT NULL,
+    Vid_id INT,
+    Foreign KEY (Vid_id) REFERENCES Pets (Id) ON DELETE CASCADE ON UPDATE CASCADE);
+
+CREATE TABLE IF NOT EXISTS dogs(       
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Name VARCHAR(20), 
+    Birth_date DATE,
+    Comands VARCHAR(20),
+	type VARCHAR(20) NOT NULL,
+    vid VARCHAR(20) NOT NULL,
+    Vid_id INT,
+    Foreign KEY (Vid_id) REFERENCES Pets (Id) ON DELETE CASCADE ON UPDATE CASCADE);
+	
+CREATE TABLE IF NOT EXISTS hamsters(       
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Name VARCHAR(20), 
+    Birth_date DATE,
+    Comands VARCHAR(20),
+	type VARCHAR(20) NOT NULL,
+    vid VARCHAR(20) NOT NULL,
+    Vid_id INT,
+    Foreign KEY (Vid_id) REFERENCES Pets (Id) ON DELETE CASCADE ON UPDATE CASCADE);
+	
+CREATE TABLE IF NOT EXISTS horses(       
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Name VARCHAR(20), 
+    Birth_date DATE,
+    Comands VARCHAR(20),
+	type VARCHAR(20) NOT NULL,
+    vid VARCHAR(20) NOT NULL,
+    Vid_id INT,
+    Foreign KEY (Vid_id) REFERENCES PackAnimals (Id) ON DELETE CASCADE ON UPDATE CASCADE);
+	
+CREATE TABLE IF NOT EXISTS camels(       
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Name VARCHAR(20), 
+    Birth_date DATE,
+    Comands VARCHAR(20),
+	type VARCHAR(20) NOT NULL,
+    vid VARCHAR(20) NOT NULL,
+    Vid_id int,
+    Foreign KEY (Vid_id) REFERENCES PackAnimals (Id) ON DELETE CASCADE ON UPDATE CASCADE);
+	
+CREATE TABLE IF NOT EXISTS donkeys(       
+    Id INT AUTO_INCREMENT PRIMARY KEY, 
+    Name VARCHAR(20), 
+    Birth_date DATE,
+    Comands VARCHAR(20),
+	type VARCHAR(20) NOT NULL,
+    vid VARCHAR(20) NOT NULL,
+    Vid_id int,
+    Foreign KEY (Vid_id) REFERENCES PackAnimals (Id) ON DELETE CASCADE ON UPDATE CASCADE);
+	
+
+-- 9 Заполнить таблицы данными о животных, их командах и датами рождения
+
+INSERT INTO Animal (Class_n)
+VALUES 
+	('Домашние'),
+	('Вьючные');  
+
+INSERT INTO Pets (Name_animal, Class_id)
+VALUES 
+	('Кошки', 1),
+	('Собаки', 1),  
+	('Хомяки', 1); 
+
+INSERT INTO PackAnimals (Name_animal, Class_id)
+VALUES 
+	('Лошади', 2),
+	('Верблюды', 2),  
+	('Ослы', 2); 
+    
+INSERT INTO cats (Name, Birth_date, Comands, type, vid, Vid_id)
+VALUES 
+	('Макс', '2019-07-06', "кушать", "HomeAnimal", "Cat", 1),
+	('Мося', '2021-09-05', "спать", "HomeAnimal", "Cat", 1);  
+
+INSERT INTO dogs (Name, Birth_date, Comands, type, vid, Vid_id)
+VALUES 
+	('Соня', '2023-01-27', "сидеть", "HomeAnimal", "Dog", 1),
+	('Инга', '2020-05-04', "место", "HomeAnimal", "Dog", 1);
+
+INSERT INTO hamsters (Name, Birth_date, Comands, type, vid, Vid_id)
+VALUES 
+	('Хома', '2019-11-16', "ко мне", "HomeAnimal", "Hamster", 1),
+	('Пухлый', '2020-05-14', "искать", "HomeAnimal", "Hamster", 1);
+
+INSERT INTO horses (Name, Birth_date, Comands, type, vid, Vid_id)
+VALUES 
+	('Стрела', '2016-11-12', "Но", "PackAnimal", "Horse", 2),
+	('Сивый', '2021-10-04', "Брр", "PackAnimal", "Horse", 2);
+
+INSERT INTO camels (Name, Birth_date, Comands, type, vid, Vid_id)
+VALUES 
+	('Быстрый', '2017-05-10', "Нагнись", "PackAnimal", "Camel", 2), 
+	('Горбатый', '2017-11-11', "Беги", "PackAnimal", "Camel", 2);
+
+INSERT INTO donkeys (Name, Birth_date, Comands, type, vid, Vid_id)
+VALUES 
+	('Упрямый', '2018-01-10', "Пошел", "PackAnimal", "Donkey", 2),  
+	('Упертый', '2022-08-09', "Стой", "PackAnimal", "Donkey", 2);
+
+
+-- 10 Удалить записи о верблюдах и объединить таблицы лошадей и ослов.
+
+TRUNCATE TABLE camels;
+
+CREATE TABLE Hor_Don
+SELECT * FROM horses
+UNION 
+SELECT * FROM donkeys;
+
+-- SELECT * FROM Hor_Don;
+
+
+-- 11 Создать новую таблицу для животных в возрасте от 1 до 3 лет и вычислить их возраст с точностью до месяца
+
+CREATE TEMPORARY TABLE Animals AS 
+SELECT *, 'Лошади' as Vids FROM horses
+UNION SELECT *, 'Ослы' AS Vids FROM donkeys
+UNION SELECT *, 'Собаки' AS Vids FROM dogs
+UNION SELECT *, 'Кошки' AS Vids FROM cats
+UNION SELECT *, 'Хомяки' AS Vids FROM hamsters;
+
+CREATE TABLE YangAnimal AS
+SELECT Name, Birth_date, Comands, Vids, TIMESTAMPDIFF(MONTH, Birth_date, CURDATE()) AS Months
+FROM Animals WHERE Birth_date BETWEEN ADDDATE(curdate(), INTERVAL -3 YEAR) AND ADDDATE(CURDATE(), INTERVAL -1 YEAR);
+ 
+-- SELECT * FROM YangAnimal;
+
+
+-- 12 Объединить все созданные таблицы в одну, сохраняя информацию о принадлежности к исходным таблицам
+
+CREATE TABLE AllAnimals
+SELECT * FROM dogs
+UNION SELECT * FROM cats
+UNION SELECT * FROM hamsters
+UNION SELECT * FROM Hor_Don;
+
+-- SELECT * FROM AllAnimals;

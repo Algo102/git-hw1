@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a762f1-6e08-4da0-9a9b-f7c2f4baef3b" name="Changes" comment="" />
+    <list default="true" id="e8a762f1-6e08-4da0-9a9b-f7c2f4baef3b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-12.MySQL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataBase.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PackAnimals/Camel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PackAnimals/Donkey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PackAnimals/Horse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PackAnimals/PackAnimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PetRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pets/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pets/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pets/Hamster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pets/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,15 +40,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Application.org.example.PetRegistry">
+    <configuration name="org.example.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="HumanFriends" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Pets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.example.PetRegistry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.PetRegistry" />
+      <module name="HumanFriends" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Pets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.org.example.PetRegistry" />
+        <item itemvalue="Application.org.example.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -41,7 +93,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702160116606</updated>
-      <workItem from="1702160118278" duration="1091000" />
+      <workItem from="1702160118278" duration="8613000" />
+      <workItem from="1702168856328" duration="4264000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1702160490785</created>
@@ -64,7 +117,21 @@
       <option name="project" value="LOCAL" />
       <updated>1702161187769</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="4 Task 6">
+      <created>1702161281753</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702161281753</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Task 7-12">
+      <created>1702161449260</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702161449260</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +142,8 @@
     <MESSAGE value="1" />
     <MESSAGE value="2 Добавил реад.ми" />
     <MESSAGE value="3 Task 1-5" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 Task 1-5" />
+    <MESSAGE value="4 Task 6" />
+    <MESSAGE value="Task 7-12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 7-12" />
   </component>
 </project>
